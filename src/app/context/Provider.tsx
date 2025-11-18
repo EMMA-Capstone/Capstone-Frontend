@@ -1,13 +1,8 @@
-"use client";
+import dynamic from 'next/dynamic'
 
-import AuthProvider  from "./AuthContext";
-import Header from "../components/Header"; // Header has "use client"
+// Import the client provider dynamically so layout stays a server component
+const ProvidersClient = dynamic(() => import('./ProvidersClients'), { ssr: false })
 
 export default function Providers({ children }: { children: React.ReactNode }) {
-  return (
-    <AuthProvider>
-      <Header />    {/* your client header here */}
-      {children}
-    </AuthProvider>
-  );
+  return <ProvidersClient>{children}</ProvidersClient>
 }

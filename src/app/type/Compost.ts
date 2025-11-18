@@ -11,7 +11,6 @@ export interface StatusMetric {
   export interface HealthIndicator {
     name: string;
     value: string;
-    optimalRange: string;
     icon: LucideIcon;
   }
   

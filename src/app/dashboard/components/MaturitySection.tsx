@@ -22,7 +22,7 @@ export default function MaturitySection({
       </div>
       <div className="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
         <div 
-          className="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-full transition-all duration-500 animate-progress"
+          className="h-full bg-linear-to-r from-green-500 to-green-400 rounded-full transition-all duration-500 animate-progress"
           style={{ width: `${progressPercentage}%` }}
         />
       </div>

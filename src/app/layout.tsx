@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+/* eslint-env browser */
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Manrope } from "next/font/google";
-import Providers from "./context/Provider";
+import RootWrapper from "./RootApp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,19 +21,20 @@ const geistMono = Geist_Mono({
 });
 
 
+
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+
+  
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[#424F40] text-white`}
+        className={`${manrope.variable} min-h-screen bg-[#424F40] text-white antialiased`}
       >
-        <Providers>
-          {children}
-        </Providers>
+        <RootWrapper>{children}</RootWrapper>
       </body>
     </html>
   );

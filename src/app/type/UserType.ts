@@ -26,11 +26,6 @@
  * };
  */
 
-type UserAccount = {
-    username: string;
-    profile_url: string;
-    notifications: AccountNotification[];
-}
 
 type AccountNotification = {
     id: string;

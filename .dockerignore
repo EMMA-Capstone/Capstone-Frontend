@@ -1,0 +1,18 @@
+node_modules
+npm-debug.log
+.env
+
+.next
+out
+dist
+build
+pages
+**/pages
+
+# Capacitor build artifacts
+android/
+ios/
+capacitor.config.ts
+capacitor.config.json
+**/capacitor-build-*
+**/capacitor-cache-*
